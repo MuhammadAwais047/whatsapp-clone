@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; font-src 'self' data:; form-action 'self'; base-uri 'none'; object-src 'none'">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Chatterly — simple, secure messaging (demo)</title>
@@ -38,8 +39,11 @@
       <div id="chat-list" class="chat-list" role="list" aria-label="Chat list"></div>
       <p id="list-empty" class="list-empty" hidden>No chats match your search.</p>
       <footer class="list-foot">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="5" y="10" width="14" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
-        Your chats stay on this device
+        <span class="foot-line">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="5" y="10" width="14" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
+          Your chats stay on this device
+        </span>
+        <span class="foot-note">Chats are stored unencrypted in this browser's local storage — anyone with access to this browser can read them, so don't treat them as confidential.</span>
       </footer>
     </aside>
 
